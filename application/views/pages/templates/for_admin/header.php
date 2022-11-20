@@ -9,6 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
+
   <link href="<?= base_url().$System['system_logo'] ?>" rel="icon">
   <title><?= $System['system_name'] ?> - <?= $Page_name ?></title>
   <link href="<?= base_url() ?>vendor/fontawesome-free/css/all.css" rel="stylesheet" type="text/css">
@@ -30,14 +31,47 @@
   <link rel="stylesheet" href="https://cdn.datatables.net/select/1.5.0/css/select.dataTables.min.css">
   <!-- diri -->
 
-
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="<?= base_url() ?>vendor/jquery/jquery.js"></script>
   <script src="<?= base_url() ?>vendor/chart.js/Chart.js"></script>
 
+ 
 
 </head>
-
+<style>
+        html {
+  scroll-behavior: smooth;
+}
+.display-none{
+    display: none;
+}
+.overlay {
+    cursor:none;
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: 10;
+    opacity: 1;
+}
+.loader {
+    overflow: hidden;
+    width: 300px;
+    height: 300px;
+    position: relative;
+    margin: 0 auto;
+    top: 28%;
+    background-image: url("<?= base_url(); ?>img/preloading.gif");
+    background-repeat: no-repeat;
+    background-size: 280px 280px;
+    background-attachment: fixed;
+    background-position: center; 
+}
+</style>
 <body id="page-top">
-  <div id="wrapper">
+<div class="wait overlay display-none">
+	<div class="loader"></div>
+</div>
+  <div id="wrapper" class = "d-none">
         <!-- header end-->

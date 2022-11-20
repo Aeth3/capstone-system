@@ -52,6 +52,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 //for login and register page
 $route['Login'] = 'login_register/login_form';
 $route['Register'] = 'login_register/register_form';
+$route['Admin-Login'] = 'login_register/login_form_admin';
+$route['Admin-Logout'] = 'login_register/logout_admin';
 //for login and register page end
 
 //for consumer page
@@ -69,6 +71,11 @@ $route['default_controller'] = 'consumer/home';
 //for consumer page admin
 $route['Admin-Home'] = 'admin/home_admin';
 $route['Billing'] = 'admin/billing_admin';
+$route['All-Purok'] = 'admin/all_purok';
+$route['All-Meter-Number'] = 'admin/all_meter_number';
+$route['All-Consumer'] = 'admin/all_consumer';
+// $route['Consumer'] = 'admin/view_consumer';
+$route['Consumer-(:any)/(:any)'] = 'admin/view_consumer/$1/$1';
 
 //for consumer page admin end
 

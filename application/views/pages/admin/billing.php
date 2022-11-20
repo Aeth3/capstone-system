@@ -296,7 +296,7 @@
               </div>
               <div class="form-group col-md-6">
                 <label for="Month">Month</label>
-                <input type="month" class="form-control" id="Month">
+                <input type="text" class="form-control" id="Month">
               </div>
             </div>
 
@@ -306,7 +306,7 @@
                 <input type="text" class="form-control" id="Arrears">
               </div>
               <div class="form-group col-md-6">
-                <label for="AmmountToPay">Amount To Pay</label>
+                <label for="AmmountToPay">Ammount To Pay</label>
                 <input type="text" class="form-control" id="AmmountToPay">
               </div>
             </div>
@@ -381,7 +381,7 @@
   
 $(document).ready(function () {
 
-  $('#selectConsumer').select2({
+      $('#selectConsumer').select2({
         placeholder: "Select a Customer",
         allowClear: true
       }); 

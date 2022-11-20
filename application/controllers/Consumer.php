@@ -8,12 +8,8 @@ class Consumer extends CI_Controller {
 
         parent::__construct(); 
         $this->load->library('session');
-        //$this->load->model('Admin_model');
-        
 
     } 
-
- 
 //Dashboard page
 	public function home()
 	{
@@ -99,7 +95,7 @@ class Consumer extends CI_Controller {
              $data = array(
                 
                 'System' => $this->Admin_model->system_title(),
-                'Page_name' => 'Dues'
+                'Page_name' => 'Transaction'
 
 
             );

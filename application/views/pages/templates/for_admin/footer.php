@@ -10,7 +10,7 @@
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Cancel</button>
-                  <a href="login.html" class="btn btn-danger">Logout</a>
+                  <a href="<?= base_url() ?>Admin-Logout" class="btn btn-danger">Logout</a>
                 </div>
               </div>
             </div>
@@ -69,6 +69,45 @@
  
 
 
+  <script>
+            $(document).ready(function(){
+                
+              
+                    $('.overlay').fadeIn().show();
+                    setTimeout(function() {
+                           $('.overlay').fadeOut(1000).addClass('display-none');
+                           $('#wrapper').removeClass('d-none');
+                           
+                           <?php if($this->session->flashdata('message_adminlogin_success')) {
+                                  
+                                  echo "const Toast = Swal.mixin({
+                                      toast: true,
+                                      position: 'top-end',
+                                      showCloseButton: true,
+                                      showConfirmButton: false,
+                                      timer: 4000,
+                                      timerProgressBar: true,
+                                      didOpen: (toast) => {
+                                        toast.addEventListener('mouseenter', Swal.stopTimer)
+                                        toast.addEventListener('mouseleave', Swal.resumeTimer)
+                                      }
+                                    });
+                          
+                                    Toast.fire({
+                                      icon: 'success',
+                                      title: 'You are now logged in as ".$this->session->flashdata("message_adminlogin_success")."!'
+                                    })";
+                          
+                                  $this->session->unset_userdata('message_adminlogin_success');
+                                                            
+                                        } ?>
 
+                                        
+                    }, 2000);
+
+            });
+
+                                
+    </script>
 
 

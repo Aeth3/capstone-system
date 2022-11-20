@@ -52,16 +52,14 @@
               </div>
             </div>
             <!-- New User Card Example -->
-            <div class="col-xl-3 col-md-6 mb-4">
+            <div class="col-xl-3 col-md-6 mb-4" style = "cursor:pointer">
               <div class="card h-100">
-                <div class="card-body">
+                <div class="card-body" onclick="window.location='<?= base_url() ?>All-Consumer';">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-uppercase mb-1">New User</div>
-                      <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">366</div>
+                      <div class="text-xs font-weight-bold text-uppercase mb-1">All Consumer</div>
+                      <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">Total: 366</div>
                       <div class="mt-2 mb-0 text-muted text-xs">
-                        <!-- <span class="text-success mr-2"><i class="fas fa-arrow-up"></i> 20.4%</span> -->
-                        <span>Since last month</span>
                       </div>
                     </div>
                     <div class="col-auto">
